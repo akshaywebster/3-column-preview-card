@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* font-family: 'Big Shoulders Display', cursive; */
+
+:root {
+  /* card background colors */
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75); /* for paragraphs */
+  --clr-very-light-gray: hsl(0, 0%, 95%); /* for headings & buttons */
+}
+
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--clr-very-light-gray);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 10px;
+  margin: 2em;
+  overflow: hidden;
+}
+
+.box1 {
+  background-color: var(--clr-bright-orange);
+}
+
+.box2 {
+  background-color: var(--clr-dark-cyan);
+}
+
+.box3 {
+  background-color: var(--clr-very-dark-cyan);
+}
+
+.box {
+  padding: 40px;
+  color: var(--clr-very-light-gray);
+}
+
+.box h2 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.box p {
+  line-height: 1.5em;
+  color: var(--clr-transparent-white);
+}
+
+.box a {
+  text-decoration: none;
+  background-color: var(--clr-very-light-gray);
+  border-radius: 30px;
+  padding: 12px 25px;
+  display: inline-block;
+  margin-top: 60px;
+  border: 2px solid var(--clr-very-light-gray);
+}
+
+.box1 a {
+  color: var(--clr-bright-orange);
+}
+.box2 a {
+  color: var(--clr-dark-cyan);
+}
+.box3 a {
+  color: var(--clr-very-dark-cyan);
+}
+
+.box a:hover {
+  background: transparent;
+  color: var(--clr-very-light-gray);
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    margin: 2rem 0.5rem;
+  }
+}
